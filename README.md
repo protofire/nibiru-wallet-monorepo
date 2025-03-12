@@ -1,18 +1,18 @@
-# <img src="https://github.com/user-attachments/assets/b8249113-d515-4c91-a12a-f134813614e8" height="60" valign="middle" alt="Safe{Wallet}" style="background: #fff; padding: 20px; margin: 0 -20px" />
+# <img src="https://github.com/user-attachments/assets/b8249113-d515-4c91-a12a-f134813614e8" height="60" valign="middle" alt="Nibiru Safe" style="background: #fff; padding: 20px; margin: 0 -20px" />
 
-# Safe{Wallet} monorepo
+# Nibiru Safe monorepo
 
-🌐 [Safe{Wallet} web app](/apps/web/README.md) ・ 📱 [Safe{Wallet} mobile app](/apps/mobile/README.md)
+🌐 [Nibiru Safe web app](/apps/web/README.md) ・ 📱 [Nibiru Safe mobile app](/apps/mobile/README.md)
 
 ## Overview
 
-Welcome to the Safe{Wallet} monorepo! This repository houses multiple applications and packages managed under a unified
+Welcome to the Nibiru Safe monorepo! This repository houses multiple applications and packages managed under a unified
 structure using Yarn Workspaces. The monorepo setup simplifies dependency management and ensures consistent development
 practices across projects.
 
 ### Key components
 
-- **apps/**: Contains application projects (e.g., `mobile` for the Safe{Wallet} mobile app).
+- **apps/**: Contains application projects (e.g., `mobile` for the Nibiru Safe mobile app).
 - **packages/**: Shared libraries and utilities.
 - **config/**: Configuration files for the monorepo.
 

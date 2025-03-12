@@ -3,7 +3,7 @@ const IS_DEV = process.env.APP_VARIANT === 'development'
 
 export default {
   expo: {
-    name: IS_DEV ? 'Safe{Wallet} MVP - Development' : 'Safe{Wallet} MVP',
+    name: IS_DEV ? 'Nibiru Safe MVP - Development' : 'Nibiru Safe MVP',
     slug: 'safe-mobileapp',
     owner: 'safeglobal',
     version: '1.0.0',
