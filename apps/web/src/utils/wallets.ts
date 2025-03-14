@@ -43,8 +43,14 @@ export const isSmartContract = async (address: string, provider?: JsonRpcProvide
   }
 
   // RPC reutrn 0x if call immiately after creation
-  await new Promise((resolve) => setTimeout(resolve, 3000))
-  const code = await web3.getCode(address)
+  let attempt = 0
+  let code = EMPTY_DATA
+  while (attempt < 5) {
+    code = await web3.getCode(address)
+    if (code !== EMPTY_DATA) break
+    attempt += 1
+    await new Promise((resolve) => setTimeout(resolve, 3000))
+  }
 
   return code !== EMPTY_DATA
 }
