@@ -10,6 +10,7 @@ import { showNotification } from '@/store/notificationsSlice'
 import { useWeb3ReadOnly } from '@/hooks/wallets/web3'
 import { parsePrefixedAddress, sameAddress } from '@/utils/addresses'
 import { asError } from '@/services/exceptions/utils'
+import { isSmartContractWithRetry } from '@/utils/wallets'
 
 export const useInitSafeCoreSDK = () => {
   const { safe, safeLoaded } = useSafeInfo()
@@ -28,29 +29,41 @@ export const useInitSafeCoreSDK = () => {
       return
     }
 
-    // A read-only instance of the SDK is sufficient because we connect the signer to it when needed
-    initSafeSDK({
-      provider: web3ReadOnly,
-      chainId: safe.chainId,
-      address: safe.address.value,
-      version: safe.version,
-      implementationVersionState: safe.implementationVersionState,
-      implementation: safe.implementation.value,
-      undeployedSafe,
-    })
-      .then(setSafeSDK)
-      .catch((_e) => {
-        const e = asError(_e)
+    const initSDKWithRetry = async () => {
+      // First check if contract is deployed
+      const isDeployed = await isSmartContractWithRetry(safe.address.value, web3ReadOnly)
+      if (!isDeployed) {
+        setSafeSDK(undefined)
+        return
+      }
+
+      // Then try to initialize SDK
+      try {
+        const sdk = await initSafeSDK({
+          provider: web3ReadOnly,
+          chainId: safe.chainId,
+          address: safe.address.value,
+          version: safe.version,
+          implementationVersionState: safe.implementationVersionState,
+          implementation: safe.implementation.value,
+          undeployedSafe,
+        })
+        setSafeSDK(sdk)
+      } catch (e) {
+        const error = asError(e)
         dispatch(
           showNotification({
             message: 'Error connecting to the blockchain. Please try reloading the page.',
             groupKey: 'core-sdk-init-error',
             variant: 'error',
-            detailedMessage: e.message,
+            detailedMessage: error.message,
           }),
         )
-        trackError(ErrorCodes._105, e.message)
-      })
+        trackError(ErrorCodes._105, error.message)
+      }
+    }
+
+    initSDKWithRetry()
   }, [
     address,
     dispatch,
