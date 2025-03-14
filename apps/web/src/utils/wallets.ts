@@ -42,6 +42,8 @@ export const isSmartContract = async (address: string, provider?: JsonRpcProvide
     throw new Error('Provider not found')
   }
 
+  // RPC reutrn 0x if call immiately after creation
+  await new Promise((resolve) => setTimeout(resolve, 1000))
   const code = await web3.getCode(address)
 
   return code !== EMPTY_DATA
