@@ -23,6 +23,7 @@ export const useInitSafeCoreSDK = () => {
   const undeployedSafe = useAppSelector((state) => selectUndeployedSafe(state, safe.chainId, address))
 
   useEffect(() => {
+    console.log('useInitSafeCoreSDK', { safeLoaded, web3ReadOnly, address })
     if (!safeLoaded || !web3ReadOnly || !sameAddress(address, safe.address.value)) {
       // If we don't reset the SDK, a previous Safe could remain in the store
       setSafeSDK(undefined)
@@ -31,7 +32,7 @@ export const useInitSafeCoreSDK = () => {
 
     const initSDKWithRetry = async () => {
       // First check if contract is deployed
-      const isDeployed = await isSmartContractWithRetry(safe.address.value, web3ReadOnly)
+      const isDeployed = undeployedSafe || (await isSmartContractWithRetry(safe.address.value, web3ReadOnly))
       if (!isDeployed) {
         setSafeSDK(undefined)
         return
