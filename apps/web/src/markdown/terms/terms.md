@@ -104,13 +104,13 @@ Smart contract wallet means, unlike a standard private key Wallet, that access c
 
 Owners need to connect a signing wallet with a Safe Account. Safe Accounts are compatible inter alia with standard private key Wallets such as hardware wallets, browser extension wallets and mobile wallets that support WalletConnect.
 
-2. “**Safe{Wallet} App**”
+2. “**Nibiru Safe App**”
 
-You may access Safe Accounts using the Safe{Wallet} web app, mobile app for iOS and android, or the browser extension (each a “Safe{Wallet} App”). The Safe{Wallet} App may be used to manage your personal digital assets on Ethereum and other common EVM chains when you connect a Safe Account with third-party services (as defined below). The Safe{Wallet} App provides certain features that may be amended from time to time.
+You may access Safe Accounts using the Nibiru Safe web app, mobile app for iOS and android, or the browser extension (each a “Nibiru Safe App”). The Nibiru Safe App may be used to manage your personal digital assets on Ethereum and other common EVM chains when you connect a Safe Account with third-party services (as defined below). The Nibiru Safe App provides certain features that may be amended from time to time.
 
 3. “**Third-Party Safe Apps**”
 
-The Safe{Wallet} App allows you to connect Safe Accounts to third-party applications (“Third-Party Safe Apps”) and use third-party services such as from the decentralized finance sector, DAO tools or services related to NFTs (“Third-Party Services"). The Third-Party Safe Apps are integrated in the user interface of the Safe{Wallet} App via inline framing. The provider of the Third-Party Safe App and/or related Third-Party Services is responsible for the operation of the service and the correctness, completeness and actuality of any information provided therein. We make a pre-selection of Third-Party Safe Apps that we show in the Safe{Wallet} App. However, we only perform a rough triage in advance for obvious problems and functionality in terms of loading time and resolution capability of the transactions. Accordingly, in the event of any (technical) issues concerning the Third-Party Services, the user must only contact the respective service provider directly. The terms of service, if any, shall be governed by the applicable contractual provisions between the User and the respective provider of the Third-Party Safe Apps or Third-Party Services. Accordingly, we are not liable in the event of a breach of contract, damage or loss related to the use of such Third-Party Safe Apps or Third-Party Services.
+The Nibiru Safe App allows you to connect Safe Accounts to third-party applications (“Third-Party Safe Apps”) and use third-party services such as from the decentralized finance sector, DAO tools or services related to NFTs (“Third-Party Services"). The Third-Party Safe Apps are integrated in the user interface of the Nibiru Safe App via inline framing. The provider of the Third-Party Safe App and/or related Third-Party Services is responsible for the operation of the service and the correctness, completeness and actuality of any information provided therein. We make a pre-selection of Third-Party Safe Apps that we show in the Nibiru Safe App. However, we only perform a rough triage in advance for obvious problems and functionality in terms of loading time and resolution capability of the transactions. Accordingly, in the event of any (technical) issues concerning the Third-Party Services, the user must only contact the respective service provider directly. The terms of service, if any, shall be governed by the applicable contractual provisions between the User and the respective provider of the Third-Party Safe Apps or Third-Party Services. Accordingly, we are not liable in the event of a breach of contract, damage or loss related to the use of such Third-Party Safe Apps or Third-Party Services.
 
 # 4\. What do the Services not consist of? {#4.-what-do-the-services-not-consist-of?}
 
@@ -168,7 +168,7 @@ Our Services do not consist of:
 
 # 6\. What are the fees for the Services? {#6.-what-are-the-fees-for-the-services?}
 
-1. The use of the Safe{Wallet} App, Third-Party Safe Apps or Third-Party Services may cause fees, including network fees, as indicated in the respective app. CC has no control over the fees charged by the Third-Party Safe Apps or Third Party Services. CC may change its own fees at any time. Price changes will be communicated to the User in due time before taking effect.
+1. The use of the Nibiru Safe App, Third-Party Safe Apps or Third-Party Services may cause fees, including network fees, as indicated in the respective app. CC has no control over the fees charged by the Third-Party Safe Apps or Third Party Services. CC may change its own fees at any time. Price changes will be communicated to the User in due time before taking effect.
 
 2. The User is only entitled to offset and/or assert rights of retention if his counterclaims are legally established, undisputed or recognized by CC.
 
@@ -186,7 +186,7 @@ Our Services do not consist of:
 
 2. You are solely responsible for securing a back-up of your Safe Account access as you see fit.
 
-3. Any recovery feature we provide access to within the Safe{Wallet} App is a mechanism controlled by your Safe Account on the Blockchain, both of which we don’t have any influence over once you have set it up. We will never act as a recoverer ourselves and don’t offer recovery services. The Self Custodial Recovery feature allows you to determine your own recovery setup and nominate anyone including yourself as your recoverer. The recoverer can start the recovery process at any time. Please note that we are not responsible for notifying you of this process (see Section 7 above). Furthermore we reserve the right to cease the access to the Self Custodial Recovery feature via our Safe{Wallet} App taking the user’s reasonable interests into account and providing due notification.
+3. Any recovery feature we provide access to within the Nibiru Safe App is a mechanism controlled by your Safe Account on the Blockchain, both of which we don’t have any influence over once you have set it up. We will never act as a recoverer ourselves and don’t offer recovery services. The Self Custodial Recovery feature allows you to determine your own recovery setup and nominate anyone including yourself as your recoverer. The recoverer can start the recovery process at any time. Please note that we are not responsible for notifying you of this process (see Section 7 above). Furthermore we reserve the right to cease the access to the Self Custodial Recovery feature via our Nibiru Safe App taking the user’s reasonable interests into account and providing due notification.
 
 4. The recovery feature is provided free of charge and liability is limited pursuant to Section 18 below.
 
@@ -196,15 +196,15 @@ Our Services do not consist of:
 
 2. You are responsible for monitoring Safe Account as you see fit.
 
-3. Any notification service we provide or offer for subscription within the Safe{Wallet} App via e-mail or push notifications or any other means of communication is provided free of charge and liability is limited pursuant to Section 18 below. Furthermore we reserve the right to change the notification feature from time to time or cease to provide them without notice.
+3. Any notification service we provide or offer for subscription within the Nibiru Safe App via e-mail or push notifications or any other means of communication is provided free of charge and liability is limited pursuant to Section 18 below. Furthermore we reserve the right to change the notification feature from time to time or cease to provide them without notice.
 
 # 10\. Are we responsible for flagging malicious transactions? {#10.-are-we-responsible-for-flagging-malicious-transactions?}
 
-1. We shall not be responsible for flagging malicious transactions in our Safe{Wallet} App.
+1. We shall not be responsible for flagging malicious transactions in our Nibiru Safe App.
 
-2. You are solely responsible for checking any transaction, address, Token or other item you interact with via your Smart Account in our Safe{Wallet} App.
+2. You are solely responsible for checking any transaction, address, Token or other item you interact with via your Smart Account in our Nibiru Safe App.
 
-5. Any security flagging or warning service we provide or offer for subscription within the Safe{Wallet} App is provided free of charge and liability is limited pursuant to Section 18 below. Furthermore we reserve the right to change the feature from time to time or cease to provide them without notice.
+5. Any security flagging or warning service we provide or offer for subscription within the Nibiru Safe App is provided free of charge and liability is limited pursuant to Section 18 below. Furthermore we reserve the right to change the feature from time to time or cease to provide them without notice.
 
 # 11\. Are we responsible for the issuance of the Safe Token and any related functionalities or reward programs? {#11.-are-we-responsible-for-the-issuance-of-the-safe-token-and-any-related-functionalities-or-reward-programs?}
 
@@ -216,7 +216,7 @@ Our Services do not consist of:
 
 # 12\. Are we responsible for third-party content and services? {#12.-are-we-responsible-for-third-party-content-and-services?}
 
-1. You may view, have access to, and may use third-party content and services, for example widget integrations, within the Safe{Wallet} App (“Third-Party Features”). You view, access, or use Third-Party Features at your own election. Your reliance on Third-Party Features is subject to separate terms and conditions set forth by the applicable third party content and/or service provider (“Third-Party Terms”). Third-Party Terms may, amongst other things,
+1. You may view, have access to, and may use third-party content and services, for example widget integrations, within the Nibiru Safe App (“Third-Party Features”). You view, access, or use Third-Party Features at your own election. Your reliance on Third-Party Features is subject to separate terms and conditions set forth by the applicable third party content and/or service provider (“Third-Party Terms”). Third-Party Terms may, amongst other things,
 
    1. involve separate fees and charges,
 
@@ -228,13 +228,13 @@ Our Services do not consist of:
 
 2. Third Party Features are provided for your convenience only. We do not verify, curate, or control Third Party Features.
 
-3. If we offer access to Third-Party Features in the Safe{Wallet} App free of charge by us (Third-Parties may charge separate fees), the liability for providing access to such Third-Party Feature is limited pursuant to Section 18 below. Furthermore we reserve the right to cease to provide access to those Third-Party Features through the Safe{Wallet} App without notice.
+3. If we offer access to Third-Party Features in the Nibiru Safe App free of charge by us (Third-Parties may charge separate fees), the liability for providing access to such Third-Party Feature is limited pursuant to Section 18 below. Furthermore we reserve the right to cease to provide access to those Third-Party Features through the Nibiru Safe App without notice.
 
 # 13\. Can we terminate or limit your right to use our Services? {#13.-can-we-terminate-or-limit-your-right-to-use-our-services?}
 
-1. We may cease offering our Services and/or terminate the Agreement and refuse access to the Safe{Wallet} App at any time. The right of the parties to terminate the Agreement at any time for cause remains unaffected. In case of our termination of the Agreement, you may no longer access your Safe Account via our Services. However, you may continue to access your Safe Account and any Tokens via a third-party wallet provider using your Recovery Phrase and Private Keys.
+1. We may cease offering our Services and/or terminate the Agreement and refuse access to the Nibiru Safe App at any time. The right of the parties to terminate the Agreement at any time for cause remains unaffected. In case of our termination of the Agreement, you may no longer access your Safe Account via our Services. However, you may continue to access your Safe Account and any Tokens via a third-party wallet provider using your Recovery Phrase and Private Keys.
 
-2. We reserve the right to limit the use of the Safe{Wallet} App to a specified number of Users if necessary to protect or ensure the stability and integrity of the Services. We will only be able to limit access to the Services. At no time will we be able to limit or block access to or transfer your funds without your consent.
+2. We reserve the right to limit the use of the Nibiru Safe App to a specified number of Users if necessary to protect or ensure the stability and integrity of the Services. We will only be able to limit access to the Services. At no time will we be able to limit or block access to or transfer your funds without your consent.
 
 # 14\. Can you terminate your Agreement with us? {#14.-can-you-terminate-your-agreement-with-us?}
 
@@ -242,7 +242,7 @@ You may terminate the Agreement at any time without notice.
 
 # 15\. What licenses and access do we grant to you? {#15.-what-licenses-and-access-do-we-grant-to-you?}
 
-1. All intellectual property rights in Safe Accounts and the Services throughout the world belong to us as owner or our licensors. Nothing in these Terms gives you any rights in respect of any intellectual property owned by us or our licensors and you acknowledge that you do not acquire any ownership rights by downloading the Safe{Wallet} App or any content from the Safe{Wallet} App.
+1. All intellectual property rights in Safe Accounts and the Services throughout the world belong to us as owner or our licensors. Nothing in these Terms gives you any rights in respect of any intellectual property owned by us or our licensors and you acknowledge that you do not acquire any ownership rights by downloading the Nibiru Safe App or any content from the Nibiru Safe App.
 
 2. If you are a consumer we grant you a simple, limited license, but do not sell, to you the Services you download solely for your own personal, non-commercial use.
 
@@ -250,7 +250,7 @@ You may terminate the Agreement at any time without notice.
 
 1. Without limiting your mandatory warranties, we provide the Services to you “as is” and “as available” in relation to merchantability, fitness for a particular purpose, availability, security, title or non-infringement.
 
-2. If you use the Safe{Wallet} App via web browser, the strict liability of CC for damages (sec. 536a German Civil Code) for defects existing at the time of conclusion of the contract is precluded.
+2. If you use the Nibiru Safe App via web browser, the strict liability of CC for damages (sec. 536a German Civil Code) for defects existing at the time of conclusion of the contract is precluded.
 
 3. The foregoing provisions will not limit CC’s liability as defined in Clause 18\.
 
@@ -294,8 +294,8 @@ By using our Services you hereby agree, represent and warrant that:
 
 # 18\. What about our liability to you? {#18.-what-about-our-liability-to-you?}
 
-1. If the Safe{Wallet} App or Services are provided to the User free of charge (please note, in this context, that any service, network, and/or transaction fees may be charged by third parties via the Blockchain and not necessarily by us), CC shall be liable only in cases of intent, gross negligence, or if CC has fraudulently concealed a possible material or legal defect of the Safe{Wallet} App or Services.
-2. If the Safe{Wallet} App or Services are not provided to the User free of charge, CC shall be liable only (i) in cases pursuant to Clause 18.1 as well as (ii) in cases of simple negligence for damages resulting from the breach of an essential contractual duty, a duty, the performance of which enables the proper execution of this Agreement in the first place and on the compliance of which the User regularly relies and may rely, whereby CC’s liability shall be limited to the compensation of the foreseeable, typically occurring damage. The Parties agree that the typical foreseeable damage equals the sum of the annual Fees paid or agreed to be paid by the User to CC during the course of the calendar year in which the event giving rise to the damage claim occurred. Liability in cases of simple negligence for damages resulting from the breach of a non-essential contractual duty are excluded.
+1. If the Nibiru Safe App or Services are provided to the User free of charge (please note, in this context, that any service, network, and/or transaction fees may be charged by third parties via the Blockchain and not necessarily by us), CC shall be liable only in cases of intent, gross negligence, or if CC has fraudulently concealed a possible material or legal defect of the Nibiru Safe App or Services.
+2. If the Nibiru Safe App or Services are not provided to the User free of charge, CC shall be liable only (i) in cases pursuant to Clause 18.1 as well as (ii) in cases of simple negligence for damages resulting from the breach of an essential contractual duty, a duty, the performance of which enables the proper execution of this Agreement in the first place and on the compliance of which the User regularly relies and may rely, whereby CC’s liability shall be limited to the compensation of the foreseeable, typically occurring damage. The Parties agree that the typical foreseeable damage equals the sum of the annual Fees paid or agreed to be paid by the User to CC during the course of the calendar year in which the event giving rise to the damage claim occurred. Liability in cases of simple negligence for damages resulting from the breach of a non-essential contractual duty are excluded.
 3. The limitations of liability according to Clause 18.1 and Clause 18.2 do not apply (i) to damages resulting from injury to life, body or health, (ii) insofar as CC has assumed a guarantee, (iii) to claims of the User according to the Product Liability Act and (iv) to claims of the User according to the applicable data protection law.
 4. The limitation of liability also applies to the personal liability of the organs, legal representatives, employees and vicarious agents of CC.
 5. If the User suffers damages due to the loss of data, CC is not liable for this, insofar as the damage would have been avoided by a regular and complete backup of all relevant data by the User.

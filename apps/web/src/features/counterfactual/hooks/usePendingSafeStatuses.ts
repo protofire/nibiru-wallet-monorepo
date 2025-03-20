@@ -18,7 +18,7 @@ import { useWeb3ReadOnly } from '@/hooks/wallets/web3'
 import { CREATE_SAFE_EVENTS, trackEvent } from '@/services/analytics'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { useEffect, useRef } from 'react'
-import { isSmartContract } from '@/utils/wallets'
+import { isSmartContractWithRetry } from '@/utils/wallets'
 import { gtmSetSafeAddress } from '@/services/analytics/gtm'
 
 export const safeCreationPendingStatuses: Partial<Record<SafeCreationEvent, PendingSafeStatus | null>> = {
@@ -96,7 +96,7 @@ const usePendingSafeStatus = (): void => {
       const { chainId } = await provider.getNetwork()
       if (chainId !== BigInt(safe.chainId)) return
 
-      const isContractDeployed = await isSmartContract(safeAddress)
+      const isContractDeployed = await isSmartContractWithRetry(safeAddress, provider)
 
       if (isContractDeployed) {
         dispatch(removeUndeployedSafe({ chainId: safe.chainId, address: safeAddress }))

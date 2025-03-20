@@ -1,6 +1,10 @@
 import type { ReactElement, ReactNode } from 'react'
 import { SvgIcon, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import DiscordIcon from '@/public/images/common/discord-icon.svg'
+import TelegramIcon from '@mui/icons-material/Telegram'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import TwitterIcon from '@mui/icons-material/X'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import css from './styles.module.css'
@@ -8,8 +12,9 @@ import { AppRoutes } from '@/config/routes'
 import packageJson from '../../../../package.json'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
-import { HELP_CENTER_URL } from '@/config/constants'
-import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
+import { HELP_FORM_URL } from '@/config/constants'
+import darkPalette from '@/components/theme/darkPalette'
+import ProtofireLogo from '@/public/images/protofire-logo.svg'
 
 const footerPages = [
   AppRoutes.welcome.index,
@@ -33,7 +38,6 @@ const FooterLink = ({ children, href }: { children: ReactNode; href: string }): 
 
 const Footer = (): ReactElement | null => {
   const router = useRouter()
-  const isOfficialHost = useIsOfficialHost()
 
   if (!footerPages.some((path) => router.pathname.startsWith(path))) {
     return null
@@ -46,7 +50,7 @@ const Footer = (): ReactElement | null => {
   return (
     <footer className={css.container}>
       <ul>
-        {isOfficialHost ? (
+        {/* {isOfficialHost ? (
           <>
             <li>
               <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
@@ -77,12 +81,60 @@ const Footer = (): ReactElement | null => {
           </>
         ) : (
           <li>This is an unofficial distribution of the app</li>
-        )}
+        )} */}
+
+        <>
+          <li>
+            <ExternalLink href="https://discord.com/invite/nibirufi" noIcon sx={{ svg: { mr: 0.5 } }}>
+              <SvgIcon component={DiscordIcon} inheritViewBox fontSize="inherit" />
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink href="https://t.me/nibiruchain" noIcon sx={{ svg: { mr: 0.5 } }}>
+              <SvgIcon component={TelegramIcon} inheritViewBox fontSize="inherit" />
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink href="https://x.com/NibiruChain" noIcon sx={{ svg: { mr: 0.5 } }}>
+              <SvgIcon component={TwitterIcon} inheritViewBox fontSize="inherit" />
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink href="https://www.linkedin.com/company/nibiruchain/" noIcon sx={{ svg: { mr: 0.5 } }}>
+              <SvgIcon component={LinkedInIcon} inheritViewBox fontSize="inherit" />
+            </ExternalLink>
+          </li>
+          <li>
+            <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
+          </li>
+          <li>
+            <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
+          </li>
+        </>
 
         <li>
           <ExternalLink href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} noIcon>
             <SvgIcon component={GitHubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} /> v{packageJson.version}
           </ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href={HELP_FORM_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
+            Help
+          </ExternalLink>
+        </li>
+        <li>
+          <Typography variant="caption">
+            Supported by{' '}
+            <SvgIcon
+              component={ProtofireLogo}
+              inheritViewBox
+              fontSize="small"
+              sx={{ verticalAlign: 'middle', mx: 0.5 }}
+            />
+            <MUILink href="https://protofire.io" sx={{ color: darkPalette.primary.main, textDecoration: 'none' }}>
+              Protofire
+            </MUILink>
+          </Typography>
         </li>
       </ul>
     </footer>

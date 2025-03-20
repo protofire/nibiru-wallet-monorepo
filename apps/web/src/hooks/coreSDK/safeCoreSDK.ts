@@ -12,6 +12,7 @@ import semverSatisfies from 'semver/functions/satisfies'
 import { isValidMasterCopy } from '@/services/contracts/safeContracts'
 import { sameAddress } from '@/utils/addresses'
 import { isPredictedSafeProps, isReplayedSafeProps } from '@/features/counterfactual/utils'
+import { isSmartContractWithRetry } from '@/utils/wallets'
 
 export const isLegacyVersion = (safeVersion: string): boolean => {
   const LEGACY_VERSION = '<1.3.0'
@@ -58,6 +59,24 @@ export const initSafeSDK = async ({
   const providerNetwork = (await provider.getNetwork()).chainId
   if (providerNetwork !== BigInt(chainId)) return
 
+  // For undeployed safes, try to initialize with predicted props
+  if (undeployedSafe) {
+    if (isPredictedSafeProps(undeployedSafe.props) || isReplayedSafeProps(undeployedSafe.props)) {
+      return Safe.init({
+        provider: provider._getConnection().url,
+        isL1SafeSingleton: chainId === chains.eth,
+        predictedSafe: undeployedSafe.props,
+      })
+    }
+    return
+  }
+
+  // For deployed safes, wait for deployment with retry
+  const isDeployed = await isSmartContractWithRetry(address, provider)
+  if (!isDeployed) {
+    return undefined
+  }
+
   const safeVersion = version ?? (await Gnosis_safe__factory.connect(address, provider).VERSION())
   let isL1SafeSingleton = chainId === chains.eth
 
@@ -81,17 +100,6 @@ export const initSafeSDK = async ({
     isL1SafeSingleton = true
   }
 
-  if (undeployedSafe) {
-    if (isPredictedSafeProps(undeployedSafe.props) || isReplayedSafeProps(undeployedSafe.props)) {
-      return Safe.init({
-        provider: provider._getConnection().url,
-        isL1SafeSingleton,
-        predictedSafe: undeployedSafe.props,
-      })
-    }
-    // We cannot initialize a Core SDK for replayed Safes yet.
-    return
-  }
   return Safe.init({
     provider: provider._getConnection().url,
     safeAddress: address,

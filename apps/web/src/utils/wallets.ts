@@ -43,7 +43,6 @@ export const isSmartContract = async (address: string, provider?: JsonRpcProvide
   }
 
   const code = await web3.getCode(address)
-
   return code !== EMPTY_DATA
 }
 
@@ -53,6 +52,28 @@ export const isSmartContractWallet = memoize(
   },
   (chainId, address) => chainId + address,
 )
+
+export const isSmartContractWithRetry = async (
+  address: string,
+  provider?: JsonRpcProvider,
+  maxAttempts = 5,
+  initialDelayMs = 1000,
+): Promise<boolean> => {
+  if (!provider || !address) return false
+
+  let attempt = 0
+  while (attempt < maxAttempts) {
+    const isDeployed = await isSmartContract(address, provider)
+    if (isDeployed) return true
+
+    // Exponential backoff
+    const delayMs = initialDelayMs * Math.pow(2, attempt)
+    await new Promise((resolve) => setTimeout(resolve, delayMs))
+    attempt++
+  }
+
+  return false
+}
 
 /* Check if the wallet is unlocked. */
 export const isWalletUnlocked = async (walletName: string): Promise<boolean | undefined> => {

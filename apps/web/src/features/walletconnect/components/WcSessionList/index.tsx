@@ -10,7 +10,6 @@ import { Button, CircularProgress, List, ListItem, ListItemAvatar, ListItemIcon,
 import type { SessionTypes } from '@walletconnect/types'
 import { useCallback, useContext } from 'react'
 import css from './styles.module.css'
-import WcNoSessions from './WcNoSessions'
 
 type WcSesstionListProps = {
   sessions: SessionTypes.Struct[]
@@ -66,7 +65,7 @@ const WcSessionListItem = ({ session }: { session: SessionTypes.Struct }) => {
 
 const WcSessionList = ({ sessions }: WcSesstionListProps) => {
   if (sessions.length === 0) {
-    return <WcNoSessions />
+    return null
   }
 
   return (
