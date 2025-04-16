@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - apps/web/**
+      - packages/store/**
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -21,7 +22,7 @@ jobs:
 
       - uses: ./.github/actions/yarn
 
-      - uses: CatChen/eslint-suggestion-action@v4.1.7
+      - uses: CatChen/eslint-suggestion-action@v4.1.8
         with:
           request-changes: true # optional
           fail-check: true # optional

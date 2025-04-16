@@ -167,6 +167,7 @@ export function clickOnSidebarImportBtn() {
 }
 
 export function showAllSafes() {
+  cy.wait(500)
   cy.get('body').then(($body) => {
     if ($body.find(expandSafesList).length > 0) {
       cy.get(expandSafesList).click()
@@ -230,6 +231,7 @@ export function verifyCopyAddressBtn(data) {
 }
 
 export function verifyEtherscanLinkExists() {
+  main.verifyMinimumElementsCount(explorerBtn, 1)
   cy.get(sidebarContainer)
     .should('be.visible')
     .within(() => {
@@ -396,7 +398,7 @@ export function checkAddNetworkBtnPosition(index) {
     })
 }
 export function clickOnAddNetworkBtn() {
-  cy.get(addNetworkBtn).click()
+  cy.get(addNetworkBtn).eq(0).click()
   cy.get(addChainDialog).should('be.visible')
 }
 

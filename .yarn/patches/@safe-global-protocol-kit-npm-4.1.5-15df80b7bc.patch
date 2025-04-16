@@ -1,0 +1,13 @@
+diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
+index 4937a8edcfb3981d3974d2a0fa9bafdb92cde131..4859e00620d8f1be29a864d63ff099e4d7dc2567 100644
+--- a/dist/src/utils/eip-3770/config.js
++++ b/dist/src/utils/eip-3770/config.js
+@@ -13,6 +13,8 @@ exports.networks = [
+     { chainId: 14n, shortName: 'flr' },
+     { chainId: 16n, shortName: 'cflr' },
+     { chainId: 18n, shortName: 'tst' },
++    { chainId: 6900n, shortName: 'cataclysm-1' },
++    { chainId: 6911n, shortName: 'nibiru-testnet-2' },
+     { chainId: 19n, shortName: 'sgb' },
+     { chainId: 25n, shortName: 'cro' },
+     { chainId: 28n, shortName: 'bobarinkeby' },
